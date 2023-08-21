@@ -1,26 +1,32 @@
 \chapter{Introduction}\label{intro}
+ At present there are millions of sites, applications, blogs that deal with text data. Most of the data deals with complex emotions of the people. Sometimes it is about a bad product, sometimes it is simply about someone's mental health condition. In order to sort all the data and make sense of it, a system is necessary.And it is not possible for a human being to make sense of millions and billions of data. So different language processing methods was created. Methods that can give results after processing thousands of data. These methods include models like RNN, LSTM, NLP.
 
-In the present world, we are currently seeing a boom in social media popularity and
-ecommerce sites. More than half of the world uses social media for different
-interactions and a quarter of the people now prefer ecommerce sites for purchases
-of different necessities. The use of texts in these sites is seen excessively as people
-share their opinions as posts, blogs and reviews in social media and reviews of
-products in different ecommerce sites. As a result, we now have a very big resource
-in our hand which can be used for providing tailor made services for the customers
-by service providers. Determining emotion from texts can help us reach a verdict
-on a topic or a product from thousands or millions of people. It will be possible to
-determine whether a service is appreciated or hated by the people simply from their
-posts, reviews in an instant, saving tons of time and playing a big role in product
-improvement. Furthermore, it can be also applied in applications such as emotion
-retrieval from suicide notes, detecting insulting sentences in chat conversations and
-so on. Therefore, a better method of detecting emotion from text based data is very
-crucial in the modern world.
+Long short term memory or for short, LSTM is type of recurrent neural network. It is more like a modified version which can easily remember past data in memory. LSTM uses back propagation to train itself. So the solution we discuss is to implement LSTM to detect emotions more accurately from texts using better computation methods. 
+
 \section{Problem Statement}
+The problem is that we have huge data and not enough ways to process it and get a intended outcome. Existing models don't always give accurate results on the emotion the textual data is expressing. It can easily be identified by a human but it needs to be done by machines or simply computers more efficiently using less resources while computing the result. Because a lot of the existing methods rely on heavy computational resources. By using LSTM and modifying to give better output. 
 
+We implement emotion detection and train it with datasets from kaggle which contains data consisting of mainly four emotions. Deep learning methods has been utilised for sentence analysis and processing of emotional data. Various approaches exist today for detecting emotion from text but often it is only limited to three categories, positive, negative and neutral. Deep learning technique provides the ability to classify different emotions as well from text data.
+\section{Problem Background}
+Neural networks plays an important role in the world of deep learning. There are a lot of neural network models which are used for this purpose. But ass discussed earlier, not all of them provides efficient results. For example, CNN can also be used to identify emotions from texts but it has a drawback, it doesn't store the trained knowledge for it to be used later. The network needs to be trained every time we want to run tests. It starts from scratch again. That's why older neural network models cant utilize the benefit of memory storage. That's why we have deep learning capable algorithms such as LSTM, BI-LSTM which learns each and every word from the given sentences present in the corpus.   
 
+\section{Motivations}
 
-\section{Objectives of the Thesis}
-From the proposal
+We are currently seeing a boom in social media popularity and ecommerce sites. More than half of the world uses social media for different interactions and a quarter of the people now prefer ecommerce sites for purchases of different necessities. The use of texts in these sites is seen excessively as people share their opinions as posts, blogs and reviews in social media and reviews of products in different ecommerce sites. As a result, we now have a very big resource in our hand which can be used for providing tailor made services for the customers by service providers. Determining emotion from texts can help us reach a verdict on a topic or a product from thousands or millions of people. It will be possible to determine whether a service is appreciated or hated by the people simply from their posts, reviews in an instant, saving tons of time and playing a big role in product improvement. Furthermore, it can be also applied in applications such as emotion retrieval from suicide notes, detecting insulting sentences in chat conversations and so on. Therefore, a better method of detecting emotion from text based data is very crucial in the modern world.
 
-\section{Thesis Outline} 
-The rest of this thesis is organized as follows.
+\section{Research Objectives}
+There are many emotion detection techniques but not all of them provide state of
+the art accuracy. There are abundant ways to make it more efficient and less time
+consuming on the hardware capability end. The objectives of this project include –
+\begin{itemize}
+\item To better understand the concept of LSTM model and its word embedding techniques
+\item To improve accuracy of emotion detection from texts using LSTM model
+\item To detect wide range of emotions from given text in terms of anger, fear, joy and sadness 
+\item To build a better algorithm to be implemented in applications like sentiment analysis
+\end{itemize}
+
+\section{Significance of the Research} 
+Emotion detection allows the ability to extract insights from comments on social media, survey data or other sources of feedback methods. These insights are often helpful in understanding targeted people's perspective. It can also be used to determine mental condition of suicidal patients from their diaries or blogs. Which is why emotion detection is greatly important in this digital era. Therefore accurate results from such research will be of great importance to the world. 
+
+\section{Key Contribution}
+This research offers its contribution in improving accuracy of LSTM by fine tuning its architecture, improving performance with data training and optimizing it to have better learning rate and proper weight initialization.
