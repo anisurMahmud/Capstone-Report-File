@@ -1,7 +1,22 @@
-\chapter{Literature Review} \label{ch:literature_review}
+\chapter{Background Study} \label{ch:literature_review}
 
 
+Emotions that incite individuals to write down certain words at particular times are what emotion detection is about. People often convey their feelings through texts, words. That's why it has been the topic of research for many. Researchers often try to create or innovate or perfect systems to better understand how emotions can be extracted in a meaningful way. Deep learning has also paved the way for researchers to further study this topic.
 \section{Literature Review}
+
+\subsection{Emotion Correlation Mining Through Deep Learning Models on Natural Language Text}
+Xinzhi Wang et al.[1] introduced an embedded recursive neural network for improving emotion recognition, Long Short-Term Memory (LSTM) was used as a variant of RNNs. This method determines to do the potential and meaningful correlation among emotions from Web news. Tow deep neural network models, CNN-LSTM2 and CNN-LSTM-STACK are employed for emotion recognition. The data sets are collected from one of the most popular social platforms, news channel. Emotion correlation differs for different types datasets. In objective texts, some emotions be misinterpreted as love. Also, emotions are easily mistaken as anger. Yet, it achieved greater than 85\% and approaches 90\%.
+
+
+\subsection{Topic-Enhanced Capsule Network for Multi-Label Emotion Classification}
+Donghong Ji et al.[2] developed a capsule network which is effectively leveraging for multiple emotion prediction. This model consists of two components, a topic module and a capsule model. The topic module takes Bag of Words (BoW) as input via Variational Autoencoder (VAE) and learns latent topics and keywords. Then the capsule module captures encapsulated features for each emotion from low level to high level via three deep capsule layers. In the learning process, they pre-train the emotion module and co-train the entire part with a batch size of 16, both under early-stop strategy. Results on the benchmark data-sets showed that their method outperformed strong baselines by a large margin.
+
+
+
+\subsection{An Experimental Analysis of Data Annotation Methodologies for Emotion Detection in Short Text Posted on Social Media}
+
+Maria Krommyda et al.[3] proposed a hybrid rule-based algorithm that allows the acquisition of a dataset that is annotated with regard to the Plutchik's eight basic emotions. This technique is not focusing on the positive or negative opinions expressed but tries to determines the human emotion that is expressed. A total of 1.2 million annotated tweets were downloaded. Eighty percent of them were used as a training sample, 10\% as validation and 10\% as testing. The LSTM network was used and achieved 91.9\% accuracy. Yet, this system is weak to detect some particular emotion such as disgust and joy. But the overall performance of the system is quite significant. 
+
 
 \section{Problem Analysis}
 
