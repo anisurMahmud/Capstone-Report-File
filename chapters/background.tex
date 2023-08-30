@@ -3,43 +3,20 @@
 Emotion detection from text has now become one of the key feature to understand peoples emotion. Everyone writes about their feelings or emotion in their social media, comment box or in inbox. If a system can identify those emotions from texts then it will be very help full to understand the people's thoughts. For this reason we build a system that can detect emotion from text. In this chapter we represents our architectural diagram and detailed module design of our text based emotion detection system.
 
 \section{Design}
-Here we represent the architectural design of the system. In our system we use text data from Whatsapp. We export the chat data into text file. Then we processed the data and make a suitable data formate to detect emotion. Then this data formate are sent to the finale stage where the emotion is detected using LSTM network architecture.
-
-\begin{figure}
-  \includegraphics[width=\linewidth]{chapters/arcdesign.png}
-  \caption{System architecture}
-\end{figure}
+Here we represent the architectural design of the system. In our system we use text data from different anonymous chat data. The chat data is in text format. Data already includes different emotions specified. Then this data are sent to the finale stage where the emotion is analysed using LSTM network architecture.
 
 
 \section{Module Description}
 Here we provide detailed information about the modules of our system. That defines how our system works.
 \begin{itemize}
 \item Data collection
-\item Pre-processing
 \item FastText Word Vector Model
 \item LSTM
 \end{itemize}
 
 \subsection{Data Collection}
-To run our system at first we need a data set from where we can perform emotion detection. For our system we choose Whatsapp for our dataset. From a Whatsapp group we can easily collect our desire dataset. Whasapp export all chats in form of text file by default. It exports chats in a fixed pattern that is [Timestamp-Username-Messages]. There are also two options, we can export chats either with media or without media. Thus our system only suitable for text so we need chats without media.
- 
-To collect chat data from Whatsapp at first we have to open Whatsapp on phone. Then open an individual group or chat. Then click three dot from the right top corner of the screen. Here we found More option. Then click More option. After that click on Export Chat. That's how we can collect raw dataset.
+To run our system at first we need a data set from where we can perform emotion detection. For our system, dataset was collected from kaggle.com. It contains 16000 anonymous chat data from different whatsapp groups. Dataset is divided into three parts for training, validation and testing.
 
-\subsection{Pre-processing}
-After export the chats we load it into the application to do this at first we have to extract all the information like time, date, day, user, messages etc. Then we have to remove stop words and punctuations. There are some major modules in preprocessing:
-\begin{itemize}
-\item \textbf{Splitting Fields:} We previously mentioned that the pattern of Whatsapp data is [Timestamp-Username-Messages]. So in this step the Timestamp is extracted from the chat using regular expression.
-
-\item \textbf{Data frame creation:} After Timestamp and message are extracted the data frame is created. TO create the data frame pandas library is used.
-
-\item \textbf{Date format conversion:} Whatsapp is installed locally in each device. That's why the data set will be in device's date format such as [DD/MM/YYYY, DD/MMM/YY, MM/DD/YYYY, MM/DD/YY etc]. But Python date format is YYYY/MM/DD. So here the custom date format is converted into Python's date format.
-
-\item \textbf{Time format conversion:} Time is also present in custom format in each device just like date such as 12 hour format, 24 hour format. So in this step custom date formats are converted into a single date format which is 24 hour date format.
- 
-\item \textbf{Feature addition:} Here other meaningful information are extracted from all fields. For example Day, Date, Hour, Minute, Day Part, Period etc. has been extracted from timestamp. Similarly URLs, emojis, word count, media count etc. are also extracted from the messages part.
- 
-\item \textbf{Cleaning:} Here punctuations, stop words and unnecessary data are removed. 
-\end{itemize}
 
 \subsection{FastText Word Vector Model}
 In sentiment evaluation word embedding techniques are considered as an important factor. FastText is a word embedding technique which is used in our system. Fasttext model is a extended version of word2vec model. Usual embadded technique uses word to build word embedding but Fasttext works one level deeper. It uses part of the word to build word embedding. For example the word, “normal” with n=3,the fastText representation of this word is ⟨nor,orm,rma,mal⟩, where the angular brackets indicatethe beginning and end of the word.
