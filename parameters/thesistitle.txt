@@ -1,2 +1,2 @@
 % Put your thesis title
-Emotion Detection From Text
+Emotion Detection From Text Using LSTM
