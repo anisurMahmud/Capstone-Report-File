@@ -3,8 +3,8 @@
 \usepackage{buet_msc_thesis}
 \usepackage{lipsum}
 \usepackage{sectsty}
-\chapternumberfont{\fontsize{16}{15}\selectfont}
-\chaptertitlefont{\fontsize{16}{15}\selectfont}
+\chapternumberfont{\fontsize{17}{15}\selectfont}
+\chaptertitlefont{\fontsize{17}{15}\selectfont}
 \sectionfont{\fontsize{14}{15}\selectfont}
 \subsectionfont{\fontsize{12}{15}\selectfont}
 %\usepackage[acronym, toc]{glossaries}
@@ -51,7 +51,34 @@
 
 
 % Bibliographies and appendices
-\input{pages/bibliography.tex}
+	
+\renewcommand{\bibname}{References}
+\begin{thebibliography}{8}
+\bibitem{ref1}
+Wang X, Kou L, Sugumaran V, Luo X, Zhang H. Emotion correlation mining through deep learning models on natural language text. IEEE transactions on cybernetics. 2020 May 13;51(9):4400-13.
+
+\bibitem{ref2}
+Fei H, Ji D, Zhang Y, Ren Y. Topic-enhanced capsule network for multi-label emotion classification. IEEE/ACM Transactions on Audio, Speech, and Language Processing. 2020 Jun 10;28:1839-48.
+
+\bibitem{ref3}
+Krommyda M, Rigos A, Bouklas K, Amditis A. An experimental analysis of data annotation methodologies for emotion detection in short text posted on social media. InInformatics 2021 Mar 12 (Vol. 8, No. 1, p. 19). MDPI.
+
+\bibitem{ref4}
+Chiorrini A, Diamantini C, Mircoli A, Potena D. Emotion and sentiment analysis of tweets using BERT. InEDBT/ICDT Workshops 2021 Mar 23 (Vol. 3).
+
+\bibitem{ref5}
+Pepino L, Riera P, Ferrer L, Gravano A. Fusion approaches for emotion recognition from speech using acoustic and text-based features. InICASSP 2020-2020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) 2020 May 4 (pp. 6484-6488). IEEE.
+
+\bibitem{ref6}
+Yang X, Feng S, Zhang Y, Wang D. Multimodal sentiment detection based on multi-channel graph neural networks. InProceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers) 2021 Aug (pp. 328-339).
+
+\bibitem{ref7}
+Graterol W, Diaz-Amado J, Cardinale Y, Dongo I, Lopes-Silva E, Santos-Libarino C. Emotion detection for social robots based on NLP transformers and an emotion ontology. Sensors. 2021 Feb 13;21(4):1322.
+
+\bibitem{ref8}
+Sharma T, Diwakar M, Singh P, Lamba S, Kumar P, Joshi K. Emotion Analysis for predicting the emotion labels using Machine Learning approaches. In2021 IEEE 8th Uttar Pradesh Section International Conference on Electrical, Electronics and Computer Engineering (UPCON) 2021 Nov 11 (pp. 1-6). IEEE.
+
+\end{thebibliography}
 
 % Index, comment this out if you do not want to create an index
 \printindex
