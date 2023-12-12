@@ -10,27 +10,28 @@ Here we represent the architectural design of the system. In our system we use t
 Here we provide detailed information about the modules of our system. That defines how our system works.
 \begin{itemize}
 \item Data collection
-\item FastText Word Vector Model
+\item Data Preprocessing
+\item Glove Embedding Vector Model
 \item LSTM
 \end{itemize}
 
 \subsection{Data Collection}
-To run the system at first we need a data set from where we can perform emotion detection. For our system, dataset was collected from kaggle.com. It contains 16000 anonymous chat data from different whatsapp groups. Dataset is divided into three parts for training, validation and testing.
+To run the system at first we need a data set from where we can perform emotion detection. For our system, dataset was collected from kaggle.com. It contains about 20000 anonymous chat data from different whatsapp groups. The entire dataset is divided into three parts for testing, training and validation. The train dataset contains 16000 text data and test and validation dataset contains 2000 text data each.
 
+\subsection{Data Preprocessing}
+Preprocessing involves removing garbage value or noise from dataset. There's possibility of irrelevant data presence in dataset which are not necessary and therefore discarding them would benefit the model's training capacity and overall accuracy in the end. In our textual dataset, preprocessing involved turning all upper case letters in lower case letters, removing stop signs like full stop, coma and question mark signs.   
 
-\subsection{FastText Word Vector Model}
-In sentiment evaluation word embedding techniques are considered as an important factor. FastText is a word embedding technique which is used in our system. Fasttext model is a extended version of word2vec model. Usual embadded technique uses word to build word embedding but Fasttext works one level deeper. It uses part of the word to build word embedding. For example the word, “normal” with n=3,the fastText representation of this word is ⟨nor,orm,rma,mal⟩, where the angular brackets indicatethe beginning and end of the word.
+\subsection{Glove Embedding Vector Model}
+GloVe, short for Global Vectors for Word Representation, is an unsupervised learning algorithm for obtaining vector representations (embeddings) of words.GloVe constructs a global word-word co-occurrence matrix from large text corpora and then factorizes it to capture the semantic relationships between words. The resulting embeddings encode meaningful semantic relationships and are widely used in natural language processing tasks such as text classification and sentiment analysis. GloVe embeddings are pretrained on extensive datasets, making them effective for capturing nuanced language patterns and aiding in tasks where understanding the context and meaning of words is crucial~\cite{ref10}.
 
 \subsection{LSTM}
 LSTM stands for long short-term memory networks which is used in the field of Deep Learning.LSTM is a advanced version of recurrent neural networks (RNNs) that is design to learn long-term dependencies, especially in sequence prediction problems.
 
 \subsubsection{Architecture of LSTM}
-The role of an LSTM model is held by a memory cell known as
-a cell state that maintains its state over time. The cell state is the horizontal line that runs through the top of the below diagram. Information can be added to or removed from the cell state in LSTM and is regulated by gates. These gates optionally let the information flow in and out of the cell. It contains a point-wise multiplication operation and a sigmoid neural net layer that assist the mechanism. The sigmoid layer gives out numbers between zero and one, where
-zero means nothing should be let through, and one means everything should be let through.
+The role of an LSTM model is held by a memory cell known as a cell state that maintains its state over time. The cell state is the horizontal line that runs through the top of the below diagram. Information can be added to or removed from the cell state in LSTM and is regulated by gates. These gates optionally let the information flow in and out of the cell. It contains a point-wise multiplication operation and a sigmoid neural net layer that assist the mechanism. The sigmoid layer gives out numbers between zero and one, where zero means nothing should be let through, and one means everything should be let through.~\cite{ref9}
 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
   \includegraphics[width=\linewidth]{chapters/LSTM.png}
   \caption{LSTM architecture}
 \end{figure}

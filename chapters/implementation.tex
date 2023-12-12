@@ -1,0 +1,30 @@
+\chapter{Implementation} \label{ch:implementation}
+Theoretically everything works on paper but a method can not be justified completely unless it is implemented and tested as well. This chapter emphasizes on requirements for running the model and how the model is actually built and its working principle.
+
+\section{System Requirements}
+Deep learning models often require heavy hardware to operate faster. These models can be run on lower end desktop computers but training the data and testing it would take a lot of time. There are two methods of working on these models
+\begin{itemize}
+\item Using PAAS Services namely Google Colab
+\item Using Jupyter Notebook on local machine
+\end{itemize} 
+\subsection{Using PAAS Services}
+Platform as a service or simply PAAS provides necessary hardware and software support for development purposes based on subscription or fees. For our model, Google Colab is a great service that provides great support to a certain range for free of cost. It is a hosted jupyter notebook service that requires no setup to use while providing resources to build models for example gpus~\cite{url1}. Only requirement in this case is a stable internet connection and a functioning computer device with a browser.
+\subsection{Using Jupyter Notebook}
+Jupyter notebook is a web-based interactive computational environment which is used by wide variety of developers for managing and integrating big data tools~\cite{url2}. In order to use it on local machine, one will need certain hardware capabilities to work with machine learning models.
+\begin{table}
+\caption{Hardware and OS Requirement for Jupyter Notebook}
+\begin{tabular}{|l|l|}
+\hline
+Type & Specification \\
+\hline
+CPU & Any Quad core CPU with at least 2.1 GHZ base speed \\
+\hline
+Ram & 8 gigabytes \\
+\hline
+GPU(Optional) & 8 gigabytes of vram or higher for fast computation \\
+\hline
+OS & Linux, Windows, MacOS \\
+\hline
+\end{tabular}
+\end{table}
+
