@@ -21,10 +21,43 @@ CPU & Any Quad core CPU with at least 2.1 GHZ base speed \\
 \hline
 Ram & 8 gigabytes \\
 \hline
-GPU(Optional) & 8 gigabytes of vram or higher for fast computation \\
+GPU(Optional) & 8 gigabytes of vram or higher for faster computation \\
 \hline
 OS & Linux, Windows, MacOS \\
 \hline
 \end{tabular}
 \end{table}
 
+
+\section{Dataset}
+Dataset for the proposed emotion detection model contains 16000 thousand lines of dialogue for training purposes, 2000 lines of dialogue each for validation and testing purposes. Pandas was used here for data analysis and data manipulation. Pandas is a powerful and easy to use open source software library which is used for data analysis and manipulation. It offers data structures and operations for manipulating numeric tables and time series~\cite{ref11}.
+
+\section{Preprocessing}
+Dataset used for the proposed model is mainly text based and only contained plain anonymous messages. However, the dialogues or messages contained coma signs, full stop signs and a lot of the letters are in upper case or lower case form. Using python libraries, these anomalies are normalized. For further preprocessing, label encoding, a python library is used which is a technique for converting categorical columns into numerical columns so they can be fitted by models. It is an important preprocessing step.~\cite{url3} 
+
+\section{Use of Tokenization}
+There are thousands of words in the used dataset and there are words that were used multiple times in different sentences. By using tokenizer which is a library function of keras, it was possible to turn texts into tokens which is later indexed or vectorized~\cite{url4}. Here, the words are indexed based on the frequency of occurrences.
+\section{Glove Embedding}
+Glove wiki gigaword 300 was used as glove embedding. Glove embedding basically helps in catching similar words in dataset and make vector representations of those words. It is an unsupervised learning algorithm~\cite{url5}.
+\section{Model Building}
+The proposed model is mainly using LSTM to make predictions on emotion on given dataset. For training the model, training dataset was used with validation dataset to improve accuracy. Here lower batch size is considered for better feature extraction. Moreover, there are eight layers in the proposed model. The layers are as follows-
+\begin{itemize}
+\item Embedding Layer
+\item LSTM Layer
+\item 3 Dropout Layers
+\item 2 Dense Layers with sigmoid activation function
+\item Activation Layer with softmax function
+\end{itemize}
+\subsection{Embedding Layer}
+Embedding layer is a type of hidden layer which maps input information from high dimensional to a lower dimensional space. For this model, the embedding class from keras API was used. The vocabulary size of dataset was used as input dimension and output dimension was used similar to glove embedding's dictionary dimension size which uses 300 length vectors to represent each word.
+\subsection{LSTM Layer}
+Keras API provides a great way to implement lstm layer with customizable parameters. The proposed model used lstm layer with 256 memory units that represent the dimensionality of outer space. This layer will classify and make predictions on the time series data.
+\subsection{Dropout Layers}
+The proposed model utilizes multiple dropout layers to tackle overfitting. In case of overfitting, the model is designed to drop 25\% of nodes in the neural network training processes and act as if they are not part of the network architecture. 
+\subsection{Dense Layers}
+Dense layers acts as a layer in which neurons receive input from all the previous layers. The proposed model includes two dense layers. One of the dense layers has a activation function named sigmoid and consists of 64 neural units. The second dense layer includes only six neural units
+\subsection{Activation Layer}
+Softmax activation function is used in the proposed model. It converts vector of values to probability distribution where the output vector are in range from 0 to 1. Here the softmax function is used for the last layer of emotion classification network because the result is to be interpreted as a probability distribution.
+
+\subsection{Use of Optimizer and EarlyStopping}
+For further improving the model, Adam optimizer is used with a learning rate of 0.0005 which greatly improves learning capacity of network. In order to further avoid unnecessary training cycles, early stopping is implemented with patience set to nine. Therefore if the network doesn't face improvements over nine epochs, it will stop training process of the model.
