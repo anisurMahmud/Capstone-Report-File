@@ -49,4 +49,41 @@ F1 Score = {\frac{2*(Precision*Recall)}{Precision+Recall}}
 \end{equation}
 
 \section{Results And Discussion}
+We use a data-set for the implementation of our LSTM architecture is mainly text based contained total 20000 thousand plain anonymous messages. We investigated our architecture in two ways. First we ran the model without using Word Embedding, then we found improvements in training, testing and validation accuracy using GloVe Embedding. LSTM architecture gives 0.8245 as Testing Accuracy without using Embedding while using Embedding the architecture gives 0.9255. Also, we have greatly reduced training and validation losses by using GloVe. The proposed model is trained with a limit of 70 epochs.
 
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|cc|cc|cc|}
+\hline
+\multirow{2}{*}{Model} & \multicolumn{2}{c|}{Training}         & \multicolumn{2}{c|}{Validation}       & \multicolumn{2}{c|}{Testing}          \\ \cline{2-7} 
+                       & \multicolumn{1}{c|}{Accuracy} & Loss  & \multicolumn{1}{c|}{Accuracy} & Loss  & \multicolumn{1}{c|}{Accuracy} & Loss  \\ \hline
+LSTM Without GloVe     & \multicolumn{1}{c|}{92.1\%}   & 1.9\% & \multicolumn{1}{c|}{83.2\%}   & 4.2\% & \multicolumn{1}{c|}{82.45\%}  & 4.5\% \\ \hline
+LSTM With GloVe        & \multicolumn{1}{c|}{97.8\%}   & 0.5\% & \multicolumn{1}{c|}{93.1\%}   & 1.7\% & \multicolumn{1}{c|}{92.55\%}  & 1.8\% \\ \hline
+\end{tabular}
+\caption{Model Accuracy Comparison}
+\end{table}
+
+Table 5.2. The table shows the model accuracy comparison while using and not using GloVe with the model. So, to get better results using Word Embedding with LSTM found more effective.
+
+We have worked with 6 emotions in our model. Precision, recall, F1-scores for different emotions are shown in Table 5.3.
+
+Table 5.3. The Table shows among the 6 emotions,  the F1-Score of 'Fear' is the highest, the scores of other emotions are also close. F1-score's accuracy 0.93. F1-score's macro avg. and weighted avg. 0.89 and 0.92.
+\pagebreak
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+Emotion       & Precision & Recall & F1-Score \\ \hline
+Sadness       & 0.92      & 0.94   & 0.93     \\ \hline
+Anger         & 0.88      & 0.90   & 0.89     \\ \hline
+Love          & 0.92      & 0.96   & 0.94     \\ \hline
+Surprise      & 0.91      & 0.77   & 0.84     \\ \hline
+Fear          & 0.97      & 0.96   & 0.96     \\ \hline
+Joy           & 0.79      & 0.73   & 0.76     \\ \hline
+Accuracy      & -         & -      & 0.93     \\ \hline
+Marco Avg.    & 0.90      & 0.88   & 0.89     \\ \hline
+Weighted Avg. & 0.93      & 0.93   & 0.92     \\ \hline
+\end{tabular}
+\caption{The results obtained for Six Emotions}
+\end{table}
