@@ -1,3 +1,50 @@
 \chapter{Testing and Result Analysis}
+This chapter emphasizes the testing and result analysis procedure of our model. Testing and result analysis are vital component of the development and assessment process for any model. Testing is a systematic procedure of evaluating a model's performance based on various measures. Where the goal is to ensure that the model meets it's expected requirements. On the other hand the result analysis involves analysing the outcome of the testing process. This process interprets  model's performance and effectiveness in various metrics and calculations.
 
+\section{Testing Procedure}
+About four thousands of text data are used to test the performance of our built model. Where two thousands are used as validation data and another two thousands are used as test data. This data are  but different from text data
+
+\section{Model Evaluation}
+Model evaluation is a process which help us to measure the performance of a model based on some metrics. This procedure in needed for a model to check whether the model meets the expected performance or not. This also helps to find out the weakness of a model. There are many types of metrics for evaluating a model. Such as Accuracy, Precision, Recall , F1 score etc. This section emphasizes some of the performance measure metrics which are used to evaluate the performance of our model.
+\subsection{Confusion Matrix}
+Most of the performance metrics are measured based on the confusion matrix. It's a two dimensional table which consists of actual value and predicted value. And four types of value are represented in this table based on these two types of value. Which are True Positive(TP), False Positive(FP), False Negative(FN) and True Negative(TN). True positive and true negative represents the term when actual value and predicted value are same. Where false positive and false negative represents the mismatch between actual value and predicted value.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+& Actual Positive (1) & Actual Negative (0)\\
+\hline
+Predicted Positive (1) & True Positive (TP) & False Positive (FP)  \\
+\hline
+Predicted Negative (0) & False negative(FN) & True Positive(TP) \\
+\hline
+\end{tabular}
+\caption{Confusion Matrix}
+\end{table}
+
+\subsection{Accuracy}
+Accuracy represents the model's correct predictions in a mathematical form. It defines how close the prediction to the actual value.
+The formula for calculating accuracy is,
+\begin{equation}
+Accuracy = {\frac{TP+TN}{TP+TN+FP+FN}}
+\end{equation}
+
+\subsection{Precision}
+Precision represents how close the measure value to each other. Here the value of true positives are divided by the total predicted positives,
+\begin{equation}
+Precision = {\frac{TP}{TP+FP}}
+\end{equation}
+
+\subsection{Recall}
+Recall defines the ratio of all correctly predicted positive predictions. Here the value of true positive predictions are divided by all positive predictions.
+\begin{equation}
+Precision = {\frac{TP}{TP+FN}}
+\end{equation}
+
+\subsection{F1 Score}
+F1 score represents the overall test accuracy of a model. It provides feedback based on precision and recall.
+\begin{equation}
+F1 Score = {\frac{2*(Precision*Recall)}{Precision+Recall}}
+\end{equation}
 
