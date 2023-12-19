@@ -1,6 +1,7 @@
 % Name, Role, Designation, Status, Address
 %Dr. Md. Rajibul Islam, Associate Professor, (Supervisor), "CSE, BUBT, Dhaka", 
-Mr. M. M. Fazle Rabbi, Assistant Professor, (Supervisor \& Course Teacher), "CSE, BUBT, Dhaka",
+Mr. M. M. Fazle Rabbi, Assistant Professor, (Supervisor \& Course Teacher), "Department of CSE, Bangladesh University of Business and Technology, Dhaka",
+Md. Saifur Rahman, Assistant Professor, Chairman(Acting), "Department of CSE, Bangladesh University of Business and Technology, Dhaka",
 %Dr. MEMBER NAME, Member, Professor, , "IICT, BUET, Dhaka",
 %Dr. EXTERNAL NAME, Member, Professor, (External), "Dept. of XXX, AFFILIATION",
 
